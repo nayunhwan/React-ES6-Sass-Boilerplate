@@ -12,3 +12,11 @@
 
 ## Using Library
 1. [Material UI] (http://www.material-ui.com/)
+
+
+## Installation
+```sh
+$ git clone https://github.com/nayunhwan/React-ES6-Sass-Boilerplate app-name
+$ cd app-name
+$ npm install
+```

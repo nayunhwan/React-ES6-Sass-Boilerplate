@@ -7,14 +7,12 @@ import React, {Component} from 'react';
 class DefaultPage extends Component {
   constructor(props) {
     super(props);
-
-    this.select = (index) => {this.setState({selectedIndex: index})}
   }
 
   render() {
     return (
       <div>
-        This is Skeleton Page
+        This is Default Page
       </div>
     );
   }
