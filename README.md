@@ -1,4 +1,5 @@
-# React Boilerplate
+# React ES6 Sass Boilerplate
+This repository will help you to make New React Project with ES6 and Sass 
 
 ## Application
 1. React
