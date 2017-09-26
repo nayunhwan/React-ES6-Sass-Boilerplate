@@ -4,4 +4,5 @@
 */
 
 /* Default Page */
-export DefaultPage from './_DefaultPage/DefaultPage';
+export DefaultPage from './_DefaultPage/DefaultPage.react';
+export DefaultReduxPage from './_DefaultReduxPage/DefaultReduxPage.react';

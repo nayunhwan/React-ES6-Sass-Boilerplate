@@ -3,6 +3,9 @@
 
 import React, { Component } from 'react';
 
+const defaultProps = {};
+const propTypes = {};
+
 class DefaultPage extends Component {
 	constructor(props) {
 		super(props);
@@ -16,5 +19,8 @@ class DefaultPage extends Component {
 		);
 	}
 }
+
+DefaultPage.defaultProps = defaultProps;
+DefaultPage.propTypes = propTypes;
 
 export default DefaultPage;

@@ -3,4 +3,4 @@
 * Email: nayunhwan.dev@mgail.com
 */
 
-export DefaultComponent from './_DefaultComponent/DefaultComponent.react';
+export const ServerEndPoint = 'http://localhost:3000/';
