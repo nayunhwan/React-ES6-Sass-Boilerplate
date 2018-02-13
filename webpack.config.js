@@ -1,5 +1,3 @@
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
 module.exports = {
   entry: "./src/index.js",
 
@@ -23,7 +21,7 @@ module.exports = {
         exclude: /node_modules/,
         query: {
           cacheDirectory: true,
-          presets: ["es2015", "react"]
+          presets: ["es2015", "react", "stage-0"]
         }
       },
       {
