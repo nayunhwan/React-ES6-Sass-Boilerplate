@@ -3,22 +3,24 @@
 * Email: nayunhwan.dev@mgail.com
 */
 
-import * as WebRequestUtil from "../Utils/WebRequestUtil";
+import DefaultAction from "../Actions/DefaultAction";
+import * as DefaultAPI from "../API/DefaultAPI";
 
-export const DEFAULTACTION = "DEFAULTACTION";
-
-export const action = () => {
-  return action_request();
-};
-
-const action_request = () => {
-  const url = "path/your/url";
-  return WebRequestUtil.getJson(url, action_response);
-};
-
-const action_response = (json) => {
-  return {
-    type: DEFAULTACTION,
-    actionResult: json,
+export function action() {
+  return async dispatch => {
+    try {
+      dispatch({
+        type: DefaultAction.START_TO_DEFAULT_ACTION
+      });
+      const data = await DefaultAPI.getTest();
+      dispatch({
+        type: DefaultAction.SUCCEED_TO_DEFAULT_ACTION,
+        data
+      });
+    } catch (err) {
+      dispatch({
+        type: DefaultAction.FAILED_TO_DEFAULT_ACTION
+      });
+    }
   };
-};
+}

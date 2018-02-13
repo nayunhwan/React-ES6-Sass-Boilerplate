@@ -4,14 +4,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import * as DefaultACtionCreator from "../../ActionCreators/_DefaultActionCreator";
+import * as DefaultActionCreator from "../../ActionCreators/_DefaultActionCreator";
 
 const defaultProps = {};
 const propTypes = {};
 
 const mapStateToProps = state => {
   return {
-    actionResult: state.reducer.actionResult,
+    actionResult: state.reducer.actionResult
   };
 };
 
@@ -21,19 +21,15 @@ class DefaultPage extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(DefaultACtionCreator.action());
+    this.props.dispatch(DefaultActionCreator.action());
   }
-	
+
   render() {
-    return (
-      <div>
-				This is Default Redux Page
-      </div>
-    );
+    return <div>This is Default Redux Page</div>;
   }
 }
 
 DefaultPage.defaultProps = defaultProps;
 DefaultPage.propTypes = propTypes;
 
-export default DefaultPage = connect(mapStateToProps)(DefaultPage);
+export default (DefaultPage = connect(mapStateToProps)(DefaultPage));

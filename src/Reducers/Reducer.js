@@ -3,19 +3,19 @@
 * Email: nayunhwan.dev@mgail.com
 */
 
-import { DEFAULTACTION } from "../ActionCreators/_DefaultActionCreator";
-
 import { combineReducers } from "redux";
 
+import DefaultAction from "../Actions/DefaultAction";
+
 const initialState = {
-  actionResult: null,
+  data: null
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case DEFAULTACTION:
+    case DefaultAction.SUCCEED_TO_DEFAULT_ACTION:
       return Object.assign({}, state, {
-        actionResult: action.actionResult,
+        data: action.data
       });
     default:
       return state;
