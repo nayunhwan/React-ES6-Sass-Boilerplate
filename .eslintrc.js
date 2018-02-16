@@ -6,6 +6,7 @@ module.exports = {
     node: true
   },
   extends: "eslint:recommended",
+  parser: "babel-eslint",
   parserOptions: {
     ecmaVersion: 8,
     ecmaFeatures: {
@@ -16,6 +17,7 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
+    "strict": 0,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1,
     "arrow-spacing": ["error", { before: true, after: true }],

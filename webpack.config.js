@@ -12,7 +12,7 @@ module.exports = {
     contentBase: __dirname + "/public/",
     historyApiFallback: true
   },
-
+  devtool: "source-map",
   module: {
     loaders: [
       {
