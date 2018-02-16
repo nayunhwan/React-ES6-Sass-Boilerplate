@@ -32,4 +32,4 @@ class DefaultPage extends Component {
 DefaultPage.defaultProps = defaultProps;
 DefaultPage.propTypes = propTypes;
 
-export default (DefaultPage = connect(mapStateToProps)(DefaultPage));
+export default connect(mapStateToProps)(DefaultPage);
