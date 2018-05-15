@@ -1,34 +1,30 @@
 // React Common Modules
 import React, { Component } from "react";
 // React Router
-import { Router, Route, browserHistory, IndexRoute } from "react-router";
+// import { Router, Route, browserHistory, IndexRoute } from "react-router";
+import { Route, Switch, withRouter } from "react-router-dom";
 // Material UI Provider for React
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 // Own Modules
 import { DefaultPage, DefaultReduxPage } from "./Pages/";
 
-
 class App extends Component {
-
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <MuiThemeProvider>
-        <Router history={browserHistory}>
-          <Route path="/">
-            <IndexRoute component={DefaultPage}/>
-          </Route>
-          <Route path="/redux">
-            <IndexRoute component={DefaultReduxPage}/>
-          </Route>
-        </Router>
-      </MuiThemeProvider>
+      <div>
+        <Route exact path="/" component={DefaultPage} />
+        <Route exact path="/redux" component={DefaultReduxPage} />
+        <Switch>
+          <Route exact path="/depth1/params" component={DefaultPage} />
+          <Route exact path="/depth1" component={DefaultPage} />
+        </Switch>
+      </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
