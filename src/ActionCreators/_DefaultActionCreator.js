@@ -15,7 +15,9 @@ export function action() {
       const data = await DefaultAPI.getTest();
       dispatch({
         type: DefaultAction.SUCCEED_TO_DEFAULT_ACTION,
-        data
+        payload: {
+          data
+        }
       });
     } catch (err) {
       dispatch({

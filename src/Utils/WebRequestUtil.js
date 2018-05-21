@@ -1,6 +1,6 @@
 /*
 * Author: @nayunhwan (github.com/nayunhwan)
-* Email: nayunhwan.dev@mgail.com
+* Email: nayunhwan.dev@gmail.com
 */
 
 import fetch from "isomorphic-fetch";
@@ -54,7 +54,11 @@ export const get = ({ url, headers, body }, callback) => {
   return axios({
     method: "GET",
     url: ServerEndPoint + url,
-    headers: headers,
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      ...headers
+    },
     data: body
   })
     .then(res => {
@@ -62,7 +66,8 @@ export const get = ({ url, headers, body }, callback) => {
       return res;
     })
     .catch(err => {
-      return err;
+      console.error(err);
+      throw new Error();
     });
 };
 
@@ -70,7 +75,11 @@ export const post = ({ url, headers, body }, callback) => {
   return axios({
     method: "POST",
     url: ServerEndPoint + url,
-    headers: headers,
+    headers: {
+      ...headers,
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    },
     data: body
   })
     .then(res => {
@@ -78,6 +87,7 @@ export const post = ({ url, headers, body }, callback) => {
       return res;
     })
     .catch(err => {
-      return err;
+      console.error(err);
+      throw new Error();
     });
 };
