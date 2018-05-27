@@ -15,7 +15,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case DefaultAction.SUCCEED_TO_DEFAULT_ACTION:
       return Object.assign({}, state, {
-        data: action.data
+        data: action.payload.data
       });
     default:
       return state;
