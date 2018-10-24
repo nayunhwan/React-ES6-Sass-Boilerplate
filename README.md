@@ -4,7 +4,7 @@ This Boilerplate is deprecated. I don't recommend to use this boilerplate any mo
 ---
 
 # ~React ES6 Sass Boilerplate~
-~This repository will help you to make New React Project with ES6 and Sass ~
+~This repository will help you to make New React Project with ES6 and Sass~
 
 ## Application
 1. React
