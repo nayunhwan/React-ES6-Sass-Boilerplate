@@ -1,3 +1,6 @@
+# DEPRECATED BOILERPLATE
+This Boilerplate is deprecated. I don't recommend to use this boilerplate any more. If you want to build the new react project, use [**React-Create-app**](https://github.com/facebook/react-create-app)
+
 # React ES6 Sass Boilerplate
 This repository will help you to make New React Project with ES6 and Sass 
 
